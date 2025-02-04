@@ -116,6 +116,19 @@ const students = [
 const grades = [
     {
         studentId: 1,
-        
-    }
+        grade: 90
+    },
+    {
+        studentId: 2,
+        grade: 85        
+    },
+
 ];
+
+//使用map + find 合併資料
+const studentsWithGrades = students.map(student => {
+    const studentGrade = grades.find(grade => grade.studentId === student.id);
+    return { ...student, grade: studentGrade ? studentGrade.grade: null};
+});
+
+console.log(studentsWithGrades);
