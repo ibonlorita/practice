@@ -132,3 +132,5 @@ const studentsWithGrades = students.map(student => {
 });
 
 console.log(studentsWithGrades);
+
+//.map()
